@@ -9,8 +9,6 @@ import { useShallowEqualSelector } from './common/hooks'
 const App: React.FC = () => {
     const data = useShallowEqualSelector((state) => state.userLogin.data)
 
-    console.log(data)
-
     return (
         <div className="App">
             <BrowserRouter>
