@@ -21,4 +21,4 @@
 # To run project locally:
 - cd nord-web-homework
 - npm install
-- npm start
+- npm run dev

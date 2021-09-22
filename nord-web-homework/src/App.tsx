@@ -4,15 +4,28 @@ import Nav from './components/Nav'
 import Login from './pages/Login'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import { useShallowEqualSelector } from './common/hooks'
 
 const App: React.FC = () => {
+    const data = useShallowEqualSelector((state) => state.userLogin.data)
+
+    console.log(data)
+
     return (
         <div className="App">
             <BrowserRouter>
-                <Nav />
+                <Nav userToken={data.token} />
                 <main>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/login" component={Login} />
+                    <Route
+                        path="/"
+                        exact
+                        render={() => <Home userToken={data.token} />}
+                    />
+                    <Route
+                        path="/login"
+                        exact
+                        render={() => <Login loginData={data} />}
+                    />
                 </main>
             </BrowserRouter>
         </div>
