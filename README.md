@@ -3,7 +3,6 @@
 - Create a server explorer web app:
     * Implement login - POST
     https://playground.tesonet.lt/v1/tokens
-    { username: "tesonet", password: "partyanimal" }
     * Display servers list - GET https://playground.tesonet.lt/v1/servers
     * Make servers list sortable by name/distance
 - App must work on all modern browsers + IE11
