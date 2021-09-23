@@ -14,7 +14,7 @@ export declare namespace UserLoginDataModel {
     }
 
     export interface UserData {
-        token?: string
+        token: string
         message?: string
     }
 }

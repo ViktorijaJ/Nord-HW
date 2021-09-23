@@ -1,0 +1,30 @@
+.servers-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", serif;
+  margin-top: 40px;
+
+  &-sort {
+    margin-bottom: 20px;
+    align-self: flex-end;
+  }
+
+  &-table {
+    border-spacing: 5px;
+
+    tr:first-child {
+      text-transform: uppercase;
+      background: none;
+
+      th {
+        border-bottom: 1px solid black;
+      }
+    }
+
+    tr:nth-child(odd):not(:first-child) {
+      background: #FFF
+    }
+  }
+}

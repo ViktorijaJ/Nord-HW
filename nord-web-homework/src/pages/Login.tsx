@@ -31,6 +31,11 @@ const Login: React.FC<Props> = ({ loginData }) => {
         if (loginData?.token) {
             history.push('/')
         }
+
+        //clear error message on component close
+        return () => {
+            setLoginError('')
+        }
     }, [loginData])
 
     const handleSubmit = (e: SyntheticEvent) => {

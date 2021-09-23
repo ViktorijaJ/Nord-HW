@@ -1,7 +1,9 @@
-import React, { SyntheticEvent } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { userLoginDataReset } from '../data/slices/userLogin'
 import { useAppDispatch } from '../common/hooks'
+
+import '../styles/Nav.scss'
 
 type Props = {
     userToken?: string
